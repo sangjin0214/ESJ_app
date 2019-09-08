@@ -1,6 +1,7 @@
 from flask import Flask, request, send_file
 import sys
 from YoutubeDownloader import downloader
+from BlankGenerator import testpage, answerpage
 
 
 application = Flask(__name__)
@@ -8,16 +9,20 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    html = ("Hello Sangjin <br>"
-            "<a href='/youtube/'>Youtube Download</a>")
+    html = ("Welcome to Sangjin's lab <br>"
+            "<a href='/youtube/'>Youtube Download</a><br>"
+            "<a href='/blankgenerator/'>Blank Generator</a>")
     return html
 
 
 @application.route("/youtube/")
 def input_id():
     template = ""
+    '''
     with open("./YoutubeDownloader/form.html", "r") as t:
         template = t.read()
+    '''
+    template += "타다닥타다다다닥 제작중; 언젠가 끝나겠지...?"
     return template
 
 
@@ -34,5 +39,26 @@ def download():
 '''
 
 
+@application.route("/blankgenerator/")
+def textselect():
+    template = ""
+    with open("./BlankGenerator/form.html", "r") as t:
+        template = t.read()
+    return template
+
+
+@application.route("/blankgenerator/blankedtext", methods=['POST'])
+def test():
+    title = request.form['title']
+    template = testpage.test(title)
+    return template
+
+
+@application.route("/blankgenerator/answer", methods=['POST'])
+def answer():
+    template = answerpage.answer()
+    return template
+
+    
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=int(sys.argv[1]))

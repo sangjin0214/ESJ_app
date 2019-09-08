@@ -3,7 +3,7 @@ import zipfile
 import time
 import os
 
-
+#test용 list url : https://www.youtube.com/playlist?list=PLkFt_4WuMCqjaxj5G0UmdxNd7Regsi1_r
 def download(list_url):
     now = int(time.time())
     savedir = "downloads-" + str(now)
@@ -11,10 +11,13 @@ def download(list_url):
         os.makedirs(savedir)
 
     options = {'format' : 'bestaudio/best',
-               'extractaudio' : True,
                'ignoreerrors' : True,
-               'audioformat' : 'mp3',
-               'outtmpl' : savedir+'/%(title)s.mp3'}
+               'outtmpl' : savedir+'/%(id)s.%(ext)s',
+               'postprocessors': [{
+                   'key' : 'FFmpegExtractAudio',
+                   'preferredcodec' : 'mp3'
+               }]
+              }
     with youtube_dl.YoutubeDL(options) as ydl:
         ydl.download([list_url])
     
