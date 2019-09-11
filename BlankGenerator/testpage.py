@@ -1,7 +1,7 @@
 from BlankGenerator import blankgenerator
 
-def test(title):
-    test, answer = blankgenerator.process(title)
+def test(difficulty, title):
+    test, answer = blankgenerator.process(difficulty, title)
     exp = ['!', '@', '#', '$', '.', ',', '-', '&', '(', ')', '*', '?', ';', ':', '"', "'"]
     test_form = ''
     test_form += '<p>문제</p><br>'

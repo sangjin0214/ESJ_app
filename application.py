@@ -11,7 +11,8 @@ application = Flask(__name__)
 def hello():
     html = ("Welcome to Sangjin's lab <br>"
             "<a href='/youtube/'>Youtube Download</a><br>"
-            "<a href='/blankgenerator/'>Blank Generator</a>")
+            "<a href='/blankgenerator/'>Blank Generator</a>"
+            "<br><br><br>//update log<br>blankgenerator : level of difficulty added")
     return html
 
 
@@ -22,7 +23,7 @@ def input_id():
     with open("./YoutubeDownloader/form.html", "r") as t:
         template = t.read()
     '''
-    template += "타다닥타다다다닥 제작중; 언젠가 끝나겠지...?"
+    template += "타다닥타다다다닥 제작중; 언젠가 끝나겠지...? 으아아악 에러가... 디버깅디버깅디버깅 흐흑흑 저리가"
     return template
 
 
@@ -49,8 +50,9 @@ def textselect():
 
 @application.route("/blankgenerator/blankedtext", methods=['POST'])
 def test():
+    difficulty = request.form['difficulty']
     title = request.form['title']
-    template = testpage.test(title)
+    template = testpage.test(difficulty, title)
     return template
 
 

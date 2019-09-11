@@ -1,7 +1,7 @@
 from random import randint
 
 
-def process(title):
+def process(difficulty, title):
     n = 0
     temp = ""
     text = []
@@ -35,7 +35,7 @@ def process(title):
     m = 0
     for splitted_txt in splitted_text:
         for word in splitted_txt:
-            if randint(1, 100) <= 30 and word not in exp:
+            if randint(1, 100) <= int(difficulty)*10 and word not in exp:
                 answer.append(word)
                 splitted_text[m][n] = ''
             n += 1
