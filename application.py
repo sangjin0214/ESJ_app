@@ -19,10 +19,10 @@ def hello():
 @application.route("/youtube/")
 def input_id():
     template = ""
-    '''
+    
     with open("./YoutubeDownloader/form.html", "r") as t:
         template = t.read()
-    '''
+    
     template += "타다닥타다다다닥 제작중; 언젠가 끝나겠지...? 으아아악 에러가... 디버깅디버깅디버깅 흐흑흑 저리가"
     return template
 

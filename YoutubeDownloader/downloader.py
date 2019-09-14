@@ -3,7 +3,7 @@ import zipfile
 import time
 import os
 
-#test용 list url : https://www.youtube.com/playlist?list=PLkFt_4WuMCqjaxj5G0UmdxNd7Regsi1_r
+#test용 list url : https://www.youtube.com/playlist?list=PLkFt_4WuMCqjnuDqkn1SYvPbimasXNwVn
 def download(list_url):
     now = int(time.time())
     savedir = "downloads-" + str(now)
