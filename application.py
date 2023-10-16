@@ -11,7 +11,8 @@ application = Flask(__name__)
 def hello():
     html = ("Welcome to Sangjin's lab <br>"
             "<a href='/youtube/'>Youtube Download</a><br>"
-            "<a href='/blankgenerator/'>Blank Generator</a>"
+            "<a href='/blankgenerator/'>Blank Generator</a><br>"
+            "<a href='/application_confirm/'>Application Confirm</a>"
             "<br><br><br>//update log<br>blankgenerator : level of difficulty added")
     return html
 
