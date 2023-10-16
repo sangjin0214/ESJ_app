@@ -2,6 +2,7 @@ from flask import Flask, request, send_file
 import sys
 from YoutubeDownloader import downloader
 from BlankGenerator import testpage, answerpage
+from application_confirm import check_info
 
 
 application = Flask(__name__)
