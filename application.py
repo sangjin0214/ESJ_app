@@ -28,8 +28,8 @@ def hello():
             "<a href='/youtube/'>Youtube Download</a><br>"
             "<a href='/blankgenerator/'>Blank Generator</a><br>"
             "<a href='/application_confirm/'>Application Confirm</a>"
-            "<br><br><br>//update log<br>blankgenerator : level of difficulty added")
-            "<br>application_confirm : added"
+            "<br><br><br>//update log<br>blankgenerator : level of difficulty added"
+            "<br>application_confirm : added")
     return html
 
 
