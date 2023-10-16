@@ -29,7 +29,7 @@ def hello():
             "<a href='/blankgenerator/'>Blank Generator</a><br>"
             "<a href='/application_confirm/'>Application Confirm</a>"
             "<br><br><br>//update log<br>blankgenerator : level of difficulty added")
-            "<br>application_confirm : added
+            "<br>application_confirm : added"
     return html
 
 
