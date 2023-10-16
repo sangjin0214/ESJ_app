@@ -58,6 +58,7 @@ def check(phone_num):
 ["01054022584", "이석원", "롱돕바-검정", "XL", "LEE.S.W", "O"],
 ["01067741539", "박윤호", "롱돕바-흰색", "XXL", "", "O"],
 ["01084105028", "백승준", "롱돕바-검정", "XL", "白承准", "O"]]
+  temp = 0
   for i in range(len(info)):
     if phone_num == info[i][0]:
       check_form += "이름:"+info[i][1]+" / 종류-색상:"+info[i][2]+" / 사이즈:"+info[i][3]+" / 이니셜자수:"+info[i][4]
@@ -67,6 +68,9 @@ def check(phone_num):
       if info[i][5] == "":
         check_form += "X"
       check_form += "<br>"
+      temp = 1
+  if temp == 0:
+    check_form += "(해당 전화번호로 신청된 내역이 없습니다.)<br>"
   check_form += "<br><br>// 최근 입금 여부 갱신 : 2023.10.16 17:30<br>"
   check_form += "<a href='/application_confirm/'>Go back</a><br>"
   return check_form
