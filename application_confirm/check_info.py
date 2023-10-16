@@ -60,7 +60,7 @@ def check(phone_num):
 ["01084105028", "백승준", "롱돕바-검정", "XL", "白承准", ""]]
   for i in range(len(info)):
     if phone_num == info[i][0]:
-      check_form += "이름:"+info[i][1]+" / 종류-색상:"+info[i][2]+" / 사이즈:"+info[i][3]+" / "이니셜자수:"+info[i][4]
+      check_form += "이름:"+info[i][1]+" / 종류-색상:"+info[i][2]+" / 사이즈:"+info[i][3]+" / 이니셜자수:"+info[i][4]
       if info[i][4] == "":
         check_form += "(미기입)"
       check_form += " / 입금여부:"+info[i][5]
