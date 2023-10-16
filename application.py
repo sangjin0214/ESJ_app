@@ -6,6 +6,20 @@ from BlankGenerator import testpage, answerpage
 
 application = Flask(__name__)
 
+@application.route("/application_confirm/")
+def entry():
+    template = ""
+    with open("./application_confirm/form.html", "r") as t:
+        template = t.read()
+    return template
+
+
+@application.route("/application_confirm/browse_info", methods=['POST'])
+def browse():
+    phone_num = request.form['phone_num']
+    template = check_info.check(phone_num)
+    return template
+
 
 @application.route("/")
 def hello():
