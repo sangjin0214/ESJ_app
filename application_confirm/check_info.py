@@ -71,6 +71,6 @@ def check(phone_num):
       temp = 1
   if temp == 0:
     check_form += "(해당 전화번호로 신청된 내역이 없습니다.)<br>"
-  check_form += "<br><br>// 최근 입금 여부 갱신 : 2023.10.16 17:30<br>"
+  check_form += "<br><br>// 최근 입금 여부 갱신 : 2023.10.17 06:30<br>"
   check_form += "<a href='/application_confirm/'>Go back</a><br>"
   return check_form
