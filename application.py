@@ -25,7 +25,7 @@ def browse():
 
 @application.route("/")
 def hello():
-    jokbo_list = os.listdir('/')
+    jokbo_list = os.listdir('/app/')
     '''
     for i in range(len(jokbo_list)):
         jokbo_list[i] = [jokbo_list[i], os.listdir('/'+str(jokbo_list[i])+'/')]
