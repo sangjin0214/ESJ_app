@@ -25,7 +25,7 @@ def browse():
 
 @application.route("/")
 def hello():
-    jokbo_list = os.listdir('/static/')
+    jokbo_list = os.listdir('/static')
     html = ("Welcome to Sangjin's lab <br>"
             "<a href='/youtube/'>Youtube Download</a><br>"
             "<a href='/blankgenerator/'>Blank Generator</a><br>"
