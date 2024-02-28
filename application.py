@@ -25,8 +25,9 @@ def browse():
 
 @application.route("/")
 def hello():
-    jokbo_list = os.listdir('/app/')
     '''
+    jokbo_list = os.listdir('/app/')
+    
     for i in range(len(jokbo_list)):
         jokbo_list[i] = [jokbo_list[i], os.listdir('/'+str(jokbo_list[i])+'/')]
     '''
@@ -36,7 +37,8 @@ def hello():
             "<a href='/application_confirm/'>Application Confirm</a>"
             "<br><br><br>//update log<br>blankgenerator : level of difficulty added"
             "<br>application_confirm : added"
-            "<br>"+str(jokbo_list))
+'''            "<br>"+str(jokbo_list))
+'''
     return html
 
 
