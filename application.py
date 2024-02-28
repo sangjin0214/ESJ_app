@@ -3,7 +3,6 @@ import sys
 from YoutubeDownloader import downloader
 from BlankGenerator import testpage, answerpage
 from application_confirm import check_info
-import os
 
 
 application = Flask(__name__)
@@ -25,20 +24,12 @@ def browse():
 
 @application.route("/")
 def hello():
-    '''
-    jokbo_list = os.listdir('/app/')
-    
-    for i in range(len(jokbo_list)):
-        jokbo_list[i] = [jokbo_list[i], os.listdir('/'+str(jokbo_list[i])+'/')]
-    '''
     html = ("Welcome to Sangjin's lab <br>"
             "<a href='/youtube/'>Youtube Download</a><br>"
             "<a href='/blankgenerator/'>Blank Generator</a><br>"
             "<a href='/application_confirm/'>Application Confirm</a>"
             "<br><br><br>//update log<br>blankgenerator : level of difficulty added"
             "<br>application_confirm : added")
-'''            "<br>"+str(jokbo_list))
-'''
     return html
 
 
